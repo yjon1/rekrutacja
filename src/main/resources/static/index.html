@@ -1,0 +1,39 @@
+<html>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<head>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+			body {
+				padding:10px
+			}
+
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                if (document.getElementById('sources').value.length>0){
+
+                $.get("/operation/addIntegers/"+document.getElementById('sources').value, function(data){
+                    alert(data)
+                });
+                }
+            });
+        });
+
+
+    </script>
+</head>
+
+<h1>Zadanie rekrutacyjne:<br> sumowanie liczb całkowitych z różnych żródeł danych</h1>
+<p>
+    S1 - Baza Danych <br>
+    S2 - API z Random.org <br>
+    S3 - java.util.Random()
+<p>
+    Operacja dodawania (np S1+S1+S2+S3) <input id="sources" type="text"></input>
+    <button class="btn btn-primary" id="button">Wykonaj</button>
+</p>
+</html>
