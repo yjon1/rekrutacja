@@ -1,8 +1,10 @@
-Zadanie rekrutacyjne
+# Zadanie rekrutacyjne
 
-Budowanie
+Budowanie  
 mvn clean install
 
-Uruchomienie
+Uruchomienie  
 mvn spring-boot:run
+
+Dostęp  
 http://localhost:8080
